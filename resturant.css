@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+:root {
+    --yellow: #f1ad00;
+    --yellow_dark: #d59902;
+    --black: #000000;
+    --white: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.row.spac {
+    margin-top: 12rem;
+}
+
+.heading1 h2 {
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 6.6rem;
+}
+
+
+.navbar {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+}
+
+.navbar-nav {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+}
+
+.nav-item {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    transition: .3s linear;
+}
+
+
+.nav-item:hover {
+    background-color: var(--yellow);
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+#heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#heroContent h2 {
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 4rem;
+}
+
+#heroContent h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 6.4rem;
+    font-weight: bold;
+}
+
+#heroContent h3 {
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 3.6rem;
+}
+
+
+
+.btn {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    transition: .3s linear;
+}
+
+#heroContent .btn i {
+    padding-left: 2rem;
+}
+
+.btn:focus,
+.btn:active {
+    outline: 0 !important;
+    background-color: none;
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.btn:hover {
+    background-color: var(--yellow_dark);
+    border-color: var(--yellow);
+    ;
+    transform: scale(1.1);
+}
+
+.heroimg {
+    width: 40rem;
+}
+
+.herocontainer {
+    position: relative;
+}
+
+.back::before {
+    content: "";
+    position: absolute;
+    width: 45rem;
+    height: 50rem;
+    top: 17%;
+    left: 56%;
+    z-index: -1;
+    background: url(img/back1.png) 0 0 no-repeat;
+    background-position: right;
+
+    transform: rotate(30deg);
+}
+
+
+/* CARASOL SECTION */
+.caraimg {
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+
+
+.carousel {
+    height: 30rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--yellow);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.carousel-item {
+    margin-top: 3rem;
+    height: 20rem;
+}
+
+.carousel-caption {
+    color: var(--black);
+}
+
+.footer {
+    color: var(--white);
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.402)), url(img/banner.png) no-repeat center;
+    background-size: cover;
+}
+
+ul li{
+    list-style: none;
+    font-size: 2rem;
+}
+
+.social{
+    margin-top: 2rem;
+}
+.social span{
+    margin: 0 1rem;
+     font-size: 3rem;
+     
+}
+
+.footer .map iframe{
+    height: 30rem;
+}
+/* MEDIA QUERY */
+@media screen and (max-width:500px) {
+
+    .nav-item {
+        width: 10rem;
+    }
+
+    .heading1 h2 {
+        font-size: 4rem;
+    }
+
+    .card {
+        margin: 0px auto;
+        width: 35rem;
+    }
+
+    .back::before {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 45%;
+    }
+    .navbar-brand {
+        width: 50px;
+    }
+
+    #heroContent {
+        padding-left: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+
+    .back::before {
+        width: 30rem;
+        height: 32rem;
+        top: 20%;
+        left: 60%;
+    }
+}
